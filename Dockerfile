@@ -34,10 +34,9 @@ RUN apt-get update \
     iceweasel \
     unzip -yqq \
 
-
     && wget http://selenium-release.storage.googleapis.com/2.52/selenium-server-standalone-2.52.0.jar \
 
-    && docker-php-ext-install mbstring mcrypt curl intl gd xml zip bz2 bcmath \
+    && docker-php-ext-install mbstring mcrypt curl intl gd xml zip bz2 bcmath pdo pdo_mysql openssl json ldap \
     && pecl install xdebug-2.5.0 \
     && docker-php-ext-enable xdebug
 
